@@ -1,0 +1,18 @@
+{
+  "name": "trivia-leaderboard",
+  "version": "1.0.0",
+  "description": "Trivia Leaderboard App - INST377 Final Project",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "nodemon -e '*'",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.104.1",
+    "body-parser": "^2.2.2",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}

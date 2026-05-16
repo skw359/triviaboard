@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TriviaRank - Leaderboard</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <nav>
+    <strong>TriviaRank</strong>
+    <a href="/">Home</a>
+    <a href="/leaderboard.html" class="active">Leaderboard</a>
+    <a href="/about.html">About</a>
+  </nav>
+
+  <main class="lb-main">
+    <h1>Leaderboard</h1>
+
+    <div id="lb-loading"><p>Loading...</p></div>
+    <p id="lb-empty" class="hidden">There are no scores yet, you should be the first!</p>
+
+    <table id="lb-table" class="hidden">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Player</th>
+          <th>Score</th>
+          <th>Difficulty</th>
+        </tr>
+      </thead>
+      <tbody id="lb-body"></tbody>
+    </table>
+
+    <div id="chart-wrap" class="hidden">
+      <h2>Top 10 Scores</h2>
+      <canvas id="scores-chart"></canvas>
+    </div>
+  </main>
+
+  <script src="/js/leaderboard.js"></script>
+</body>
+</html>

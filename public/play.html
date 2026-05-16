@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TriviaRank - Play</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <nav>
+    <strong>TriviaRank</strong>
+    <a href="/">Home</a>
+    <a href="/leaderboard.html">Leaderboard</a>
+    <a href="/about.html">About</a>
+  </nav>
+
+  <main>
+    <div id="loading"><p>Loading questions...</p></div>
+
+    <div id="game-area" class="hidden">
+      <p class="progress" id="q-counter">Question 1 / 10 &mdash; Score: 0</p>
+      <p id="question-text"></p>
+      <div id="answers-grid"></div>
+    </div>
+
+    <div id="results-area" class="hidden">
+      <h1 id="results-title"></h1>
+      <p id="results-score"></p>
+      <div class="actions">
+        <button id="submit-btn">Submit Score</button>
+        <a href="/leaderboard.html">View Leaderboard</a>
+        <a href="/">Play Again</a>
+      </div>
+      <p id="submit-status" class="hidden" style="margin-top:0.75rem"></p>
+    </div>
+  </main>
+
+  <script src="/js/play.js"></script>
+</body>
+</html>

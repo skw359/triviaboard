@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TriviaRank</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <nav>
+    <strong>TriviaRank</strong>
+    <a href="/" class="active">Home</a>
+    <a href="/leaderboard.html">Leaderboard</a>
+    <a href="/about.html">About</a>
+  </nav>
+
+  <main>
+    <h1>TriviaRank</h1>
+    <p>All you have to do is answer 10 questions, submit your score, see how you rank!</p>
+
+    <label for="username">Name</label>
+    <input type="text" id="username" placeholder="Your name" maxlength="30" />
+
+    <label for="category">Category</label>
+    <select id="category">
+      <option value="">Any</option>
+      <option value="9">General Knowledge</option>
+      <option value="17">Science & Nature</option>
+      <option value="18">Computers</option>
+      <option value="21">Sports</option>
+      <option value="23">History</option>
+      <option value="27">Animals</option>
+    </select>
+
+    <label for="difficulty">Difficulty</label>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium" selected>Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <p id="error-msg" class="error hidden">Please enter your name.</p>
+    <button id="start-btn">Start Game</button>
+  </main>
+
+  <script src="/js/home.js"></script>
+</body>
+</html>
