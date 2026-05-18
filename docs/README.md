@@ -98,7 +98,7 @@ The response is an array of score objects
 
 1. Push your repo to GitHub (that's what I did)
 2. Create a Vercel account and then import it
-3. Add your `SUPABASE_URL` and `SUPABASE_KEY` in the env variables
+3. Add your `SUPABASE_LINK` and `SUPABASE_KEY` in the env variables
 4. Deploy!
 
 ### Tests for the Application
