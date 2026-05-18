@@ -6,28 +6,27 @@ This project is for INST377, and this is a browser-based trivia game. Players pi
 
 - Chrome 120+ (desktop, Android, iOS)
 
----
-
 ### What you should have
 
 - Node.js v18+
 - npm
-- Supabase account
-- Vercel account
+- A Supabase account
+- A Vercel account, both can be free (no paid tiers)
 
 ### Installation
+
+To install, run this:
 
 ```bash
 git clone https://github.com/your-username/trivia-leaderboard.git
 cd trivia-leaderboard
 npm install
-cp .env.example .env
 ```
 
-Fill in `.env`:
+Then edit the .env file:
 
 ```
-SUPABASE_URL=https://the-url-here
+SUPABASE_LINK=https://whatever-url-here.co
 SUPABASE_KEY=the-anon-key-here
 ```
 
@@ -44,15 +43,15 @@ CREATE TABLE scores (
   difficulty TEXT,
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
-
-ALTER TABLE scores DISABLE ROW LEVEL SECURITY;
 ```
+
+In Vercel, I had to disable row level security, so make sure to do that in SQL Editor tab.
 
 ### API Endpoints
 
 #### `GET /api/questions`
 
-Fetches questions from the Open Trivia Database.
+This gets the questions from the Open Trivia Database.
 
 | Param | Default | Description |
 |-------|---------|-------------|
@@ -66,9 +65,8 @@ The response is an array of question objects
 
 #### `POST /api/scores`
 
-This writes  a score to Supabase 
+This writes a score to Supabase 
 
-Body:
 ```json
 { 
   "username": "string", "score": 8, "category": "18", "difficulty": "medium" 
@@ -81,7 +79,7 @@ The response is an inserted row
 
 #### `GET /api/scores`
 
-This one returnd top scores from Supabase ordered by score descending
+This API gets the top scores from Supabase database ordered by score descending
 
 | Param | Default | Description |
 |-------|---------|-------------|
@@ -89,9 +87,16 @@ This one returnd top scores from Supabase ordered by score descending
 
 The response is an array of score objects
 
-### How to Deploy...
+### How to Deploy (aka how I did it)...
 
 1. Push your repo to GitHub (that's what I did)
 2. Create a Vercel account and then import it
 3. Add your `SUPABASE_URL` and `SUPABASE_KEY` in the env variables
 4. Deploy!
+
+### Future Improvements/Roadmap
+- I'd want to add per-question countdown timer, it could make the game more fun
+- I'd also want to add leaderboard filtering by category and difficulty
+- Finally, I'd love to prevent duplicate score submissions per session.
+   
+
