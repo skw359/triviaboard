@@ -6,7 +6,7 @@ This project is for INST377, and this is a browser-based trivia game. Players pi
 
 - Chrome 120+ (desktop, Android, iOS)
 
-### What you should have
+### What you should have (this is the Developer Manual)
 
 - Node.js v18+
 - npm
