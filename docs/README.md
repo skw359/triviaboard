@@ -8,7 +8,7 @@ This project is for INST377, and this is a browser-based trivia game. Players pi
 
 ### What you should have (this is the Developer Manual)
 
-- Node.js v18+
+- Node.js v22 (I used v22)
 - npm
 - A Supabase account
 - A Vercel account, both can be free (no paid tiers)
