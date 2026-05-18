@@ -30,6 +30,13 @@ SUPABASE_LINK=https://whatever-url-here.co
 SUPABASE_KEY=the-anon-key-here
 ```
 
+Now, start the server:
+   npm start
+
+Then open it locally or on the Vercel link:
+   http://localhost:3000 
+
+
 ### Database Setup
 
 In Supabase, create a project and then use th SQL Editor:
@@ -94,9 +101,13 @@ The response is an array of score objects
 3. Add your `SUPABASE_URL` and `SUPABASE_KEY` in the env variables
 4. Deploy!
 
+### Tests for the Application
+
+This project does not include automated tests. If you want, you can run the test command:
+
+npm test
+
 ### Future Improvements/Roadmap
 - I'd want to add per-question countdown timer, it could make the game more fun
 - I'd also want to add leaderboard filtering by category and difficulty
 - Finally, I'd love to prevent duplicate score submissions per session.
-   
-
