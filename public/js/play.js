@@ -1,9 +1,9 @@
-const params = new URLSearchParams(window.location.search);
-const USERNAME = params.get('username') || 'Anonymous';
-const CATEGORY = params.get('category') || '';
+const params     = new URLSearchParams(window.location.search);
+const USERNAME   = params.get('username') || 'Anonymous';
+const CATEGORY   = params.get('category') || '';
 
 const DIFFICULTY = params.get('difficulty') || 'medium';
-const TOTAL = 10;
+const TOTAL      = 10;
 
 
 
@@ -11,10 +11,10 @@ let questions = [];
 let current = 0;
 let score = 0;
 
-const loading = document.getElementById('loading');
-const gameArea = document.getElementById('game-area');
+const loading     = document.getElementById('loading');
+const gameArea    = document.getElementById('game-area');
 const resultsArea = document.getElementById('results-area');
-const questionCounter = document.getElementById('q-counter');
+const questionCounter    = document.getElementById('questionCounter');
 const questionText = document.getElementById('question-text');
 const answersGrid  = document.getElementById('answers-grid');
 const submitButtom = document.getElementById('submit-btn');
