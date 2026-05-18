@@ -1,4 +1,4 @@
-document.getElementById('start-btn').addEventListener('click', () => {
+document.getElementById('start-button').addEventListener('click', () => {
 
 
   const username = document.getElementById('username').value.trim();

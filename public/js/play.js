@@ -3,7 +3,7 @@ const USERNAME   = params.get('username') || 'Anonymous';
 const CATEGORY   = params.get('category') || '';
 
 const DIFFICULTY = params.get('difficulty') || 'medium';
-const TOTAL = 10;
+const TOTAL      = 10;
 
 
 
@@ -14,7 +14,7 @@ let score = 0;
 const loading     = document.getElementById('loading');
 const gameArea    = document.getElementById('game-area');
 const resultsArea = document.getElementById('results-area');
-const qCounter    = document.getElementById('q-counter');
+const questionCounter    = document.getElementById('q-counter');
 const questionText = document.getElementById('question-text');
 const answersGrid  = document.getElementById('answers-grid');
 const submitButtom = document.getElementById('submit-btn');
@@ -38,7 +38,7 @@ function shuffle(arr) {
   return arr;
 }
 
-// OUTLINE: firstly,fetch  GET /api/questions 
+// OUTLINE: firstly,fetch  GET /api/questions, then read the query parameeters, make the OpenTDB url, get it server-side, and responds to the browser with just data.results (the questions array).
 async function loadQuestions() {
 
   const query = new URLSearchParams({ amount: TOTAL, difficulty: DIFFICULTY });
@@ -59,7 +59,7 @@ async function loadQuestions() {
 function showQuestion() {
 
   const q = questions[current];
-  qCounter.textContent = `Question ${current + 1} / ${TOTAL} — Score: ${score}`;
+  questionCounter.textContent = `Question ${current + 1} / ${TOTAL} — Score: ${score}`;
   questionText.textContent = decode(q.question);
 
   answersGrid.innerHTML = '';
@@ -101,11 +101,13 @@ function userClicksAnswer(selected, answer, correct) {
 function showResults() {
 
   gameArea.classList.add('hidden');
+
   resultsArea.classList.remove('hidden');
   document.getElementById('results-title').textContent = `Game Over — ${USERNAME}`;
   document.getElementById('results-score').textContent = `${score} / ${TOTAL} correct`;
   if (score >= 7) {
     confetti({ particleCount: 100, spread: 70 });
+
   }
 
 
@@ -120,9 +122,11 @@ submitButtom.addEventListener('click', async () => {
     headers: { 
       'Content-Type': 'application/json' 
     },
+
     body: JSON.stringify({ 
       username: USERNAME, score, category: CATEGORY, difficulty: DIFFICULTY 
     })
+
   });
 
   submitStatus.classList.remove('hidden');

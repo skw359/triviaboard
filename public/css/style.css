@@ -1,16 +1,18 @@
+/*global styling for the page!!! * means global */
+
 * { 
   box-sizing: border-box; margin: 0; padding: 0; 
 }
 
 body {
   font-family: Arial;
-  background: #fff;
+  background: #767B81;
   color: #111;
   font-size: 16px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  
+
 }
 
 a { 
