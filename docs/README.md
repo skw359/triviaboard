@@ -4,7 +4,7 @@ This project is for INST377, and this is a browser-based trivia game. Players pi
 
 ## Target Browsers
 
-- Chrome 120+ (desktop, Android, iOS)
+- Chrome (latest version preferred) (desktop, Android, iOS)
 
 ### What you should have (this is the Developer Manual)
 
