@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const supabase = createClient(
-  process.env.SUPABASE_URL,
+  process.env.SUAPBASE_LINK,
   process.env.SUPABASE_KEY
 );
 
