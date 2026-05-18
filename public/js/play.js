@@ -3,7 +3,7 @@ const USERNAME   = params.get('username') || 'Anonymous';
 const CATEGORY   = params.get('category') || '';
 
 const DIFFICULTY = params.get('difficulty') || 'medium';
-const TOTAL      = 10;
+const TOTAL = 10;
 
 
 
@@ -67,13 +67,13 @@ function showQuestion() {
     const btn = document.createElement('button');
     btn.className = 'answer-btn';
     btn.textContent = decode(answer);
-    btn.addEventListener('click', () => handleAnswer(btn, answer, q.correct_answer));
+    btn.addEventListener('click', () => userClicksAnswer(btn, answer, q.correct_answer));
     answersGrid.appendChild(btn);
   }
 
 }
 
-function handleAnswer(selected, answer, correct) {
+function userClicksAnswer(selected, answer, correct) {
 
   for (const btn of answersGrid.querySelectorAll('.answer-btn')) {
     btn.disabled = true;
