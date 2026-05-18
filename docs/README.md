@@ -1,4 +1,4 @@
-# TriviaRank
+# Trivia Center
 
 This project is for INST377, and this is a browser-based trivia game. Players pick a category and difficulty, answer 10 questions from the Open Trivia Database, and submit their score to a global leaderboard! It's fun and it works!
 
@@ -106,6 +106,13 @@ The response is an array of score objects
 This project does not include automated tests. If you want, you can run the test command:
 
 npm test
+
+### Known Limitations/Bugs
+
+- There are currently no automated tests.
+- Score submissions are not authenticated, so duplicate or fake submissions are possible.
+- The leaderboard does not currently filter by category or difficulty.
+- The app depends on Open Trivia DB being available.
 
 ### Future Improvements/Roadmap
 - I'd want to add per-question countdown timer, it could make the game more fun
